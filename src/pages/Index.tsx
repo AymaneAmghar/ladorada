@@ -205,8 +205,8 @@ const Index = () => {
                   <div>
                     <h3 className="font-semibold text-marine-blue mb-1">Address</h3>
                     <p className="text-muted-foreground">
-                      Marina Boulevard, Tetouan<br />
-                      Near the Old Medina<br />
+                      Hay Wilaya, Av. 9 Avril<br />
+                      Tetouan 93000<br />
                       Morocco
                     </p>
                   </div>
