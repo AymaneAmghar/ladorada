@@ -336,7 +336,7 @@ const Index = () => {
               <div>
                 <h3 className="font-serif font-semibold text-lg mb-4">Contact</h3>
                 <div className="space-y-2 text-pearl-white/80">
-                  <p>Marina Boulevard, Tetouan</p>
+                  <p>H</p>
                   <p>+212 539 123 456</p>
                   <p>contact@ladorada.ma</p>
                 </div>
