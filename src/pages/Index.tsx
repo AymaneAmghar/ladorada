@@ -313,7 +313,7 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* Logo & Description */}
               <div className="md:col-span-2">
-                <img src="/lovable-uploads/3d4bb518-0084-4478-8f70-d7985488aec0.png" alt="La Dorada Logo" className="h-16 mb-6 brightness-0 invert" />
+                <img alt="La Dorada Logo" className="h-16 mb-6 brightness-0 invert" src="/lovable-uploads/31f44974-fd3c-40eb-a551-ae58d8946c4f.png" />
                 <p className="text-pearl-white/80 leading-relaxed max-w-md">
                   La Dorada - The premier Mediterranean seafood experience in Tetouan. 
                   Fresh ingredients, authentic flavors, and unforgettable moments by the sea.
