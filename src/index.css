@@ -2,41 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* La Dorada Restaurant Design System - Mediterranean Coastal Theme */
 
 @layer base {
   :root {
+    /* Base colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Marine Blue - Primary brand color */
+    --marine-blue: 215 75% 25%;
+    --marine-blue-light: 215 65% 35%;
+    --marine-blue-dark: 215 85% 15%;
+    
+    /* Gold - Accent color */
+    --gold: 45 85% 55%;
+    --gold-light: 45 80% 65%;
+    --gold-dark: 45 90% 45%;
+    
+    /* Coastal colors */
+    --sandy-beige: 40 25% 85%;
+    --sandy-beige-light: 40 20% 90%;
+    --ocean-foam: 180 35% 90%;
+    --pearl-white: 0 0% 98%;
+    
+    /* Semantic tokens */
+    --primary: var(--marine-blue);
+    --primary-foreground: var(--pearl-white);
+    --primary-light: var(--marine-blue-light);
+    --primary-dark: var(--marine-blue-dark);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --secondary: var(--sandy-beige);
+    --secondary-foreground: var(--marine-blue);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --accent: var(--gold);
+    --accent-foreground: var(--marine-blue-dark);
+    
+    --card: var(--pearl-white);
+    --card-foreground: var(--foreground);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --popover: var(--pearl-white);
+    --popover-foreground: var(--foreground);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: var(--sandy-beige-light);
+    --muted-foreground: 210 10% 45%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--pearl-white);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--ocean-foam);
+    --input: var(--ocean-foam);
+    --ring: var(--marine-blue);
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--marine-blue)), hsl(var(--marine-blue-light)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    --gradient-coastal: linear-gradient(180deg, hsl(var(--ocean-foam)), hsl(var(--pearl-white)));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--marine-blue) / 0.3);
+    --shadow-gold: 0 0 40px hsl(var(--gold) / 0.4);
+    --shadow-soft: 0 4px 20px hsl(var(--marine-blue) / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +88,36 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode maintains the coastal theme with deeper blues */
+    --background: var(--marine-blue-dark);
+    --foreground: var(--pearl-white);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: var(--marine-blue);
+    --card-foreground: var(--pearl-white);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: var(--marine-blue);
+    --popover-foreground: var(--pearl-white);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--gold);
+    --primary-foreground: var(--marine-blue-dark);
+    --primary-light: var(--gold-light);
+    --primary-dark: var(--gold-dark);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: var(--marine-blue-light);
+    --secondary-foreground: var(--pearl-white);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: var(--marine-blue-light);
+    --muted-foreground: var(--ocean-foam);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: var(--gold);
+    --accent-foreground: var(--marine-blue-dark);
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--pearl-white);
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: var(--marine-blue-light);
+    --input: var(--marine-blue-light);
+    --ring: var(--gold);
   }
 }
 
@@ -100,6 +127,29 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Smooth scrolling for navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--ocean-foam));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--marine-blue));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--gold));
   }
 }
