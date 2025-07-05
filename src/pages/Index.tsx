@@ -216,15 +216,15 @@ const Index = () => {
                   <Phone className="h-6 w-6 text-gold mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-marine-blue mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+212 539 123 456</p>
+                    <p className="text-muted-foreground">05399-94988</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <Mail className="h-6 w-6 text-gold mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-marine-blue mb-1">Email</h3>
-                    <p className="text-muted-foreground">contact@ladorada.ma</p>
+                    <h3 className="font-semibold text-marine-blue mb-1">Instagram</h3>
+                    <p className="text-muted-foreground">restaurant_ladorada</p>
                   </div>
                 </div>
 
@@ -233,9 +233,10 @@ const Index = () => {
                   <div>
                     <h3 className="font-semibold text-marine-blue mb-2">Opening Hours</h3>
                     <div className="space-y-1 text-muted-foreground">
-                      <p>Monday - Thursday: 12:00 PM - 11:00 PM</p>
-                      <p>Friday - Sunday: 12:00 PM - 12:00 AM</p>
+                      <p>Monday - Sunday: 11:00 AM - 12:30 AM</p>
                       <p>Kitchen closes 30 minutes before closing</p>
+                      <p>
+                    </p>
                     </div>
                   </div>
                 </div>
@@ -336,9 +337,9 @@ const Index = () => {
               <div>
                 <h3 className="font-serif font-semibold text-lg mb-4">Contact</h3>
                 <div className="space-y-2 text-pearl-white/80">
-                  <p>H</p>
-                  <p>+212 539 123 456</p>
-                  <p>contact@ladorada.ma</p>
+                  <p>Hay Wilaya, Tetouan, Morocco</p>
+                  <p>05399-49889</p>
+                  <p>Insta: restaurant_ladorada</p>
                 </div>
                 
                 <div className="flex space-x-4 mt-6">
