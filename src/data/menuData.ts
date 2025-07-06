@@ -221,23 +221,38 @@ export const desserts: MenuItem[] = [
 
 export const beverages: MenuItem[] = [
   {
-    name: "House Wine Selection",
-    description: "Red, white, and rosé wines carefully selected by our sommelier",
-    price: "80-150 DH"
+    name: "Jus D'orange",
+    description: "Fresh Orange Juice",
+    price: "23 DH"
   },
   {
-    name: "Fresh Juices",
-    description: "Orange, apple, pineapple, and seasonal fruit juices",
-    price: "35 DH"
+    name: "Jus de Citron",
+    description: "Fresh Lemon Juice",
+    price: "20 DH"
   },
   {
-    name: "Moroccan Mint Tea",
-    description: "Traditional Moroccan tea with fresh mint",
+    name: "Jus de Fraise et Jus d'Avocat",
+    description: "Fresh Strawberry and Avocado Juices",
     price: "25 DH"
   },
   {
-    name: "Coffee Selection",
-    description: "Espresso, cappuccino, latte, and Turkish coffee",
-    price: "30-45 DH"
+    name: "Jus d'Ananas et Jus de Mangue",
+    description: "Fresh Pineapple and Mango Juices",
+    price: "28 DH"
+  },
+  {
+    name: "Jus Panaché",
+    description: "Fresh Panaché Juice",
+    price: "30 DH"
+  },
+  {
+    name: "Jus Dragon et Jus Framboise",
+    description: "Fresh Dragon and Rasbperry Juices",
+    price: "35 DH"
+  },
+  {
+    name: "Mojito",
+    description: "Fresh Mojito",
+    price: "25 DH"
   }
 ];
