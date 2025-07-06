@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
@@ -144,9 +145,11 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="ocean" size="lg">
-              View Full Menu
-            </Button>
+            <Link to="/menu">
+              <Button variant="ocean" size="lg">
+                View Full Menu
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

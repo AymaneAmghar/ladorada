@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -32,9 +35,15 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('about')} className="text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
               About
             </button>
-            <button onClick={() => scrollToSection('menu')} className="text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
-              Menu
-            </button>
+            {isHomePage ? (
+              <button onClick={() => scrollToSection('menu')} className="text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
+                Menu
+              </button>
+            ) : (
+              <Link to="/menu" className="text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
+                Menu
+              </Link>
+            )}
             <button onClick={() => scrollToSection('gallery')} className="text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
               Gallery
             </button>
@@ -65,9 +74,15 @@ const Navigation = () => {
               <button onClick={() => scrollToSection('about')} className="block px-3 py-2 text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
                 About
               </button>
-              <button onClick={() => scrollToSection('menu')} className="block px-3 py-2 text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
-                Menu
-              </button>
+              {isHomePage ? (
+                <button onClick={() => scrollToSection('menu')} className="block px-3 py-2 text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
+                  Menu
+                </button>
+              ) : (
+                <Link to="/menu" className="block px-3 py-2 text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
+                  Menu
+                </Link>
+              )}
               <button onClick={() => scrollToSection('gallery')} className="block px-3 py-2 text-marine-blue hover:text-gold transition-colors duration-300 font-medium">
                 Gallery
               </button>
