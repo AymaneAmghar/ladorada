@@ -14,84 +14,215 @@ import fishTagine from '@/assets/fish-tagine.jpg';
 const Menu = () => {
   const starters = [
     {
-      name: "Calamari with Chermoula",
-      description: "Tender calamari rings served with traditional Moroccan chermoula sauce",
-      image: calamariChermoula,
-      price: "140 DH"
+      name: "Panini Poulet",
+      description: "Grilled chicken panini served with fries",
+      price: "45 DH"
     },
     {
-      name: "Seafood Bisque",
-      description: "Rich and creamy soup with fresh lobster, crab, and shrimp",
-      price: "95 DH"
+      name: "Panini Viande Hachée",
+      description: "Ground meat panini served with fries",
+      price: "45 DH"
     },
     {
-      name: "Grilled Octopus", 
-      description: "Mediterranean-style grilled octopus with olive oil and herbs",
-      price: "160 DH"
+      name: "Panini Fruits de Mer",
+      description: "Seafood panini served with fries",
+      price: "65 DH"
     },
     {
-      name: "Mixed Seafood Salad",
-      description: "Fresh mixed greens with shrimp, crab, and house vinaigrette",
-      price: "120 DH"
+      name: "Chawarma Poulet",
+      description: "Chicken shawarma served with fries",
+      price: "50 DH"
+    },
+    {
+      name: "Tacos Poulet",
+      description: "Chicken tacos served with fries",
+      price: "40 DH"
+    },
+    {
+      name: "Tacos Viande Hachée",
+      description: "Ground meat tacos served with fries",
+      price: "45 DH"
+    },
+    {
+      name: "Tacos Mixt",
+      description: "Mixed tacos served with fries",
+      price: "50 DH"
+    },
+    {
+      name: "Tacos Fruits de Mer",
+      description: "Seafood tacos served with fries",
+      price: "65 DH"
     }
   ];
 
   const mains = [
+    // Pâtes
     {
-      name: "Grilled Sea Bream",
-      description: "Fresh sea bream grilled to perfection with Mediterranean herbs and lemon",
-      image: seaBream,
-      price: "180 DH"
+      name: "Lasagne Bolognaise",
+      description: "Classic Italian lasagna with Bolognese sauce",
+      price: "55 DH"
     },
     {
-      name: "Seafood Paella",
-      description: "Traditional paella with fresh mussels, shrimp, calamari and saffron rice",
-      image: seafoodPaella,
-      price: "220 DH"
+      name: "Spaghetti Fruits de Mer",
+      description: "Spaghetti with mixed seafood",
+      price: "90 DH"
     },
     {
-      name: "Fish Tagine",
-      description: "Traditional Moroccan fish tagine with vegetables and aromatic spices",
-      image: fishTagine,
-      price: "200 DH"
+      name: "Spaghetti Bolognaise",
+      description: "Traditional spaghetti with Bolognese sauce",
+      price: "60 DH"
     },
     {
-      name: "Grilled Salmon",
-      description: "Atlantic salmon fillet with lemon butter sauce and seasonal vegetables",
-      price: "210 DH"
+      name: "Tagliatelle Fruits de Mer",
+      description: "Tagliatelle pasta with mixed seafood",
+      price: "90 DH"
+    },
+    // Pizzas
+    {
+      name: "Pizza Margarita",
+      description: "Sauce tomate, Mozzarella, Origan, Olive noire",
+      price: "M: 40dh / G: 55dh"
     },
     {
-      name: "Lobster Thermidor",
-      description: "Classic French preparation with cream sauce and cheese gratinée",
-      price: "350 DH"
+      name: "Pizza Napolitaine",
+      description: "Sauce tomate, Mozzarella, Anchois, Origan, Olive noire",
+      price: "M: 50dh / G: 65dh"
     },
     {
-      name: "Mixed Seafood Grill",
-      description: "Assorted grilled fish and shellfish with Mediterranean seasonings",
-      price: "280 DH"
+      name: "Pizza Bolognaise",
+      description: "Sauce tomate, Mozzarella, Viande hachée, Champignon, Origan, Olive noire",
+      price: "M: 50dh / G: 70dh"
+    },
+    {
+      name: "Pizza Marinera",
+      description: "Sauce tomate, Mozzarella, Calamar, Crevette, Champignon, Origan, Olive noire",
+      price: "M: 65dh / G: 85dh"
+    },
+    {
+      name: "Pizza Royal",
+      description: "Sauce tomate, Mozzarella, Crevette, Calamar, Champignon, Thon, Poivron, Origan, Olive noire",
+      price: "M: 70dh / G: 90dh"
+    },
+    // Volailles
+    {
+      name: "Filet Poulet Grillé",
+      description: "Grilled chicken fillet",
+      price: "65 DH"
+    },
+    {
+      name: "Filet Poulet à la crème",
+      description: "Chicken fillet with cream sauce",
+      price: "75 DH"
+    },
+    {
+      name: "Brochettes de Poulet",
+      description: "Chicken skewers",
+      price: "55 DH"
+    },
+    // Viandes
+    {
+      name: "Entrecôte Grillé",
+      description: "Grilled ribeye steak",
+      price: "90 DH"
+    },
+    {
+      name: "Entrecôte au Poivre",
+      description: "Ribeye steak with pepper sauce",
+      price: "110 DH"
+    },
+    {
+      name: "Filet de Boeuf Grillé",
+      description: "Grilled beef fillet",
+      price: "130 DH"
+    },
+    {
+      name: "Filet de Boeuf aux champignons",
+      description: "Beef fillet with mushroom sauce",
+      price: "150 DH"
+    },
+    {
+      name: "Tajine viande de Boeuf",
+      description: "Traditional Moroccan beef tagine",
+      price: "80 DH"
+    },
+    {
+      name: "Couscous aux sept légumes",
+      description: "Traditional couscous with seven vegetables (Every Friday)",
+      price: "60 DH"
+    },
+    // Hamburgers
+    {
+      name: "Hamburger",
+      description: "Classic hamburger served with fries",
+      price: "45 DH"
+    },
+    {
+      name: "Double Burger",
+      description: "Double patty burger served with fries",
+      price: "55 DH"
+    },
+    {
+      name: "Chicken Burger",
+      description: "Grilled chicken burger served with fries",
+      price: "45 DH"
+    },
+    {
+      name: "Cheese Burger",
+      description: "Hamburger with cheese served with fries",
+      price: "45 DH"
     }
   ];
 
   const desserts = [
     {
-      name: "Crème Brûlée",
-      description: "Classic vanilla custard with caramelized sugar",
-      price: "65 DH"
+      name: "Flan Turon",
+      description: "Traditional turron flan",
+      price: "30 DH"
     },
     {
-      name: "Chocolate Lava Cake",
-      description: "Warm chocolate cake with molten center and vanilla ice cream",
-      price: "75 DH"
+      name: "Flan Blanc",
+      description: "Classic white flan",
+      price: "30 DH"
     },
     {
-      name: "Fresh Fruit Tart",
-      description: "Seasonal fruits on pastry cream in a crisp tart shell",
-      price: "60 DH"
+      name: "Crème Caramel",
+      description: "Traditional crème caramel dessert",
+      price: "25 DH"
     },
     {
-      name: "Tiramisu",
-      description: "Traditional Italian dessert with coffee and mascarpone",
-      price: "70 DH"
+      name: "Tarte Citron",
+      description: "Fresh lemon tart",
+      price: "30 DH"
+    },
+    {
+      name: "Tarte Oreo",
+      description: "Oreo cookie tart",
+      price: "30 DH"
+    },
+    {
+      name: "Salade de Fruits",
+      description: "Fresh fruit salad",
+      price: "30 DH"
+    },
+    {
+      name: "Fruits de Saison",
+      description: "Seasonal fresh fruits",
+      price: "40 DH"
+    },
+    {
+      name: "Nougat Glacé au miel",
+      description: "Honey nougat ice cream",
+      price: "35 DH"
+    },
+    {
+      name: "Natillas",
+      description: "Traditional Spanish custard",
+      price: "25 DH"
+    },
+    {
+      name: "Häagen-Dazs",
+      description: "Premium ice cream selection",
+      price: "35 DH"
     }
   ];
 
@@ -165,8 +296,8 @@ const Menu = () => {
               Our Menu
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover our complete collection of Mediterranean seafood dishes, 
-              crafted with the finest ingredients and traditional techniques
+              Discover our complete collection of Mediterranean and European dishes, 
+              from authentic pizzas and pastas to traditional Moroccan tagines
             </p>
           </div>
         </div>
@@ -210,7 +341,7 @@ const Menu = () => {
                     Main Dishes
                   </h2>
                   <p className="text-muted-foreground">
-                    Our signature seafood dishes, the heart of our Mediterranean cuisine
+                    From authentic Italian pasta and pizza to traditional Moroccan tagines and grilled specialties
                   </p>
                 </div>
                 {renderMenuItems(mains, true)}
